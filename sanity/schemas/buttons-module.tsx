@@ -1,10 +1,10 @@
-import { ComposeIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { ComposeIcon } from "@sanity/icons";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const buttonsModule = defineType({
-  name: 'buttonsModule',
-  type: 'object',
-  title: 'Buttons',
+  name: "buttonsModule",
+  type: "object",
+  title: "Buttons",
   fields: [
     defineField({
       name: "buttons",
@@ -12,13 +12,13 @@ export const buttonsModule = defineType({
       type: "array",
       of: [
         defineArrayMember({
-        name: 'button',
-        title: 'Button',
-        type: 'button',
+        name: "button",
+        title: "Button",
+        type: "button",
         })
       ],
       validation: (Rule) => Rule.max(2)
     })
   ],
   icon: ComposeIcon,
-})
+});

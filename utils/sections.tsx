@@ -6,7 +6,7 @@ export type iSection = {
     title: string;
     backgroundColor: string;
     modules: iModule[];
-}
+};
 
 export type iModule = {
     _type: string;
@@ -22,8 +22,8 @@ export type iModule = {
 
     //buttonsModule
     buttons?: iButton[];
-}
+};
 
 export type iButton = {
     title: string;
-}
+};

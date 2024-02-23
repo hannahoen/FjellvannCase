@@ -1,10 +1,10 @@
-import {DocumentTextIcon} from '@sanity/icons'
-import {defineField, defineType} from 'sanity'
+import {DocumentTextIcon} from "@sanity/icons";
+import {defineField, defineType} from "sanity";
 
 export const button = defineType({
-  name: 'button',
-  type: 'object',
-  title: 'Button',
+  name: "button",
+  type: "object",
+  title: "Button",
   fields: [
     defineField({
       name: "title",
@@ -13,4 +13,4 @@ export const button = defineType({
     })
   ],
   icon: DocumentTextIcon,
-})
+});

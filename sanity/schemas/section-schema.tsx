@@ -3,7 +3,7 @@ import { defineField } from "sanity";
 type module = {
     _type: string,
     _key: string
-}
+};
 
 const section = {
     name: "section",
@@ -22,9 +22,9 @@ const section = {
             validation: (Rule:any) => Rule.required()
         },
         defineField({
-            name: 'modules',
-            type: 'array',
-            title: 'Modules',
+            name: "modules",
+            type: "array",
+            title: "Modules",
             validation: Rule => Rule.custom((modules) => {
                 const mods = modules as module[];
 
@@ -43,52 +43,52 @@ const section = {
                     ? true
                     : {
                         message: `There can only be one of each module. 
-                            Please remove excess modules: ${excessModules.join(' ,')}
+                            Please remove excess modules: ${excessModules.join(" ,")}
                         `
                     }
               }),
             of: [
                 defineField({
-                    name: 'textModule',
-                    title: 'Content',
-                    type: 'textModule',
+                    name: "textModule",
+                    title: "Content",
+                    type: "textModule",
                 }),
                 defineField({
-                    name: 'videoModule',
-                    title: 'Video',
-                    type: 'videoModule',
+                    name: "videoModule",
+                    title: "Video",
+                    type: "videoModule",
                 }),
                 defineField({
-                    name: 'imageModule',
-                    title: 'Image',
-                    type: 'imageModule',
+                    name: "imageModule",
+                    title: "Image",
+                    type: "imageModule",
                 }),
                 defineField({
-                    name: 'buttonsModule',
-                    title: 'Buttons',
-                    type: 'buttonsModule',
+                    name: "buttonsModule",
+                    title: "Buttons",
+                    type: "buttonsModule",
                 }),
             ],
         }),
         {
-            title: 'Background color',
-            description: 'Default: Gray',
-            name: 'backgroundColor',
-            type: 'string',
+            title: "Background color",
+            description: "Default: Gray",
+            name: "backgroundColor",
+            type: "string",
             options: {
                 list: [
-                    {title: 'Black', value: 'black'},
-                    {title: 'White', value: 'white'},
-                    {title: 'Yellow', value: 'yellow'},
-                    {title: 'Gray', value: 'gray'}
+                    {title: "Black", value: "black"},
+                    {title: "White", value: "white"},
+                    {title: "Yellow", value: "yellow"},
+                    {title: "Gray", value: "gray"}
                 ],
             },
         },
     ],
     initialValue: {
-        backgroundColor: 'gray'
+        backgroundColor: "gray"
     },
-  }
+};
   
-  export default section;
+export default section;
   

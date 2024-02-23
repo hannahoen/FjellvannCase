@@ -1,10 +1,10 @@
-import { ComposeIcon } from '@sanity/icons'
-import { defineArrayMember, defineField, defineType } from 'sanity'
+import { TextIcon } from "@sanity/icons";
+import { defineArrayMember, defineField, defineType } from "sanity";
 
 export const textModule = defineType({
-  name: 'textModule',
-  type: 'object',
-  title: 'Content',
+  name: "textModule",
+  type: "object",
+  title: "Content",
   fields: [
     defineField({
       name: "content",
@@ -13,5 +13,5 @@ export const textModule = defineType({
         of: [{ type: "block" }]
     })
   ],
-  icon: ComposeIcon,
-})
+  icon: TextIcon,
+});
