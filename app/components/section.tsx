@@ -26,7 +26,7 @@ export const Section: React.FC<IProps> = ({section}) => {
     }
 
     return (
-        <div key={section._id} className={`${bg} rounded p-5 w-auto w-full max-w-screen-xl flex gap-5 lg:flex-row flex-col`}>
+        <div key={section._id} className={`${bg} rounded p-5 w-auto w-full max-w-screen-xl flex gap-5 lg:flex-row flex-col min-h-40 lg:min-h-80 justify-content`}>
             {media && (
                 <Media media={media} alignment={mediaAlignment}/>
             )}
