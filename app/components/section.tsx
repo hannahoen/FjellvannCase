@@ -19,7 +19,7 @@ export const Section: React.FC<IProps> = ({section}) => {
 
     var bg="";
     switch(section.backgroundColor){
-        case "black": bg="bg-case-black"; break;
+        case "black": bg="bg-black"; break;
         case "white": bg="bg-case-white"; break;
         case "yellow": bg="bg-case-yellow"; break;
         default: bg="bg-case-gray"; break;
