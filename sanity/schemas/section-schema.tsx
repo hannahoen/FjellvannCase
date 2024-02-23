@@ -28,15 +28,17 @@ const section = {
             validation: Rule => Rule.custom((modules) => {
                 const mods = modules as module[];
 
-                const media = (mods || []).filter((item) => item._type === "imageModule" || item._type === "videoModule")
+                const media = (mods || []).filter((item) => item._type === "imageModule" || item._type === "videoModule");
                 const mediaPaths = media.map(
                     (med, index) => [{ _key: med._key }] || [index]
-                )
-                const buttons = (mods || []).filter(item => item._type === "buttonsModule")
+                );
+                const buttons = (mods || []).filter(item => item._type === "buttonsModule");
+                const text = (mods || []).filter(item => item._type === "textModule");
 
                 var excessModules=[];
-                if(mediaPaths.length > 1){ excessModules.push("media (only 1 video or image)"); }
-                if(buttons.length > 1){ excessModules.push("buttons") }
+                if(mediaPaths.length > 1){ excessModules.push("media (only 1 video or image)"); };
+                if(buttons.length > 1){ excessModules.push("buttons") };
+                if(text.length > 1){ excessModules.push("content") };
 
 
                 return excessModules.length === 0
@@ -45,7 +47,7 @@ const section = {
                         message: `There can only be one of each module. 
                             Please remove excess modules: ${excessModules.join(" ,")}
                         `
-                    }
+                    };
               }),
             of: [
                 defineField({
