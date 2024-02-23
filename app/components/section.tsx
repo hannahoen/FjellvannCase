@@ -17,8 +17,16 @@ export const Section: React.FC<IProps> = ({section}) => {
         mediaAlignment = media.alignment === "right" || null ? "right" : "left"
     };
 
+    var bg="";
+    switch(section.backgroundColor){
+        case "black": bg="bg-case-black"; break;
+        case "white": bg="bg-case-white"; break;
+        case "yellow": bg="bg-case-yellow"; break;
+        default: bg="bg-case-gray"; break;
+    }
+
     return (
-        <div key={section._id} className={`bg-case-${section.backgroundColor} rounded p-5 w-auto w-full flex gap-5 lg:flex-row flex-col`}>
+        <div key={section._id} className={`${bg} rounded p-5 w-auto w-full flex gap-5 lg:flex-row flex-col`}>
             {media && (
                 <Media media={media} alignment={mediaAlignment}/>
             )}
