@@ -13,7 +13,7 @@ export const Content: React.FC<IProps> = ({preTitle, title, content, backgroundC
         listItem: {
             bullet: ({children}) => <li className={`${backgroundColor === "yellow" ? "list-image-[url(/list-dark.png)]" : "list-image-[url(/list-yellow.png)] "} pl-5 list-inside`}>{children}</li>
         },
-      }
+    };
 
     return (
         <>

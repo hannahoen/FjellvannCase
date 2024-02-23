@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col gap-4 items-center w-full">
       { sections.map((section) => (
-          <Section section={section} />
+          <Section key={section._id} section={section} />
         )
       )}
     </div>
